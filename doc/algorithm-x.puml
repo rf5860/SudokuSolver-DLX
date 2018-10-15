@@ -1,0 +1,19 @@
+@startuml
+title Algorithm X
+
+start
+
+while (Any empty columns?)
+  :Choose a column / constraint;
+  if (Can any rows satisfy constraint?) then (no)
+    :No solutions exist;
+    stop
+  else (yes)
+    :Store the row as part of a potential solution;
+    :Remove all columns satisfied by the row;
+  endif
+endwhile
+
+:Solution found;
+stop
+@enduml
